@@ -26,21 +26,19 @@
 				<fieldset>
 					<legend class="formulario__legenda">Informações básicas</legend>
 					<div class="input-container">
-						<input name="nome" id="nome" autocomplete="additional-name" class="input" type="text" placeholder="Nome"
-							required>
+						<input name="nome" id="nome" autocomplete="additional-name" class="input" type="text" data-tipo="nome"
+							placeholder="Nome" required>
 						<label class="input-label" for="nome">Nome</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="email" id="email" class="input" type="email" placeholder="Email"
-							pattern="^[\w-\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-							title="Não permite números no nome de domínio e não permite domínios após o @ com menos de 2 ou mais de 3 letras"
-							required>
+						<input name="email" id="email" class="input" type="email" data-tipo="email" placeholder="Email"
+							pattern="^[\w-\.]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required>
 						<label class="input-label" for="email">Email</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="senha" id="senha" class="input" type="password" placeholder="Senha"
+						<input name="senha" id="senha" class="input" type="password" data-tipo="senha" placeholder="Senha"
 							pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$"
 							title="A senha deve conter entre 6 e 12 caracteres, necessita ter letra maiúscula, minúscula e numeros"
 							required>
@@ -57,7 +55,8 @@
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="cpf" id="cpf" class="input" type="text" placeholder="CPF">
+						<input name="cpf" id="cpf" class="input" type="text" data-tipo="cpf"
+							pattern="^(\d{3}.\d{3}.\d{3}-\d{2})|(\d{11})$" placeholder="CPF" required>
 						<label class="input-label" for="cpf">CPF</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
@@ -65,22 +64,24 @@
 				<fieldset>
 					<legend class="formulario__legenda">Endereço</legend>
 					<div class="input-container">
-						<input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+						<input name="cep" id="cep" class="input" type="text" data-tipo="cep" pattern="^\d{5}-?\d{3}$"
+							placeholder="CEP" required>
 						<label class="input-label" for="cep">CEP</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro">
+						<input name="logradouro" id="logradouro" class="input" type="text" data-tipo="logradouro"
+							placeholder="Logradouro" required>
 						<label class="input-label" for="logradouro">Logradouro</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade">
+						<input name="cidade" id="cidade" class="input" type="text" data-tipo="cidade" placeholder="Cidade" required>
 						<label class="input-label" for="cidade">Cidade</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
 					<div class="input-container">
-						<input name="estado" id="estado" class="input" type="text" placeholder="Estado">
+						<input name="estado" id="estado" class="input" data-tipo="estado" type="text" placeholder="Estado" required>
 						<label class="input-label" for="estado">Estado</label>
 						<span class="input-mensagem-erro">Este campo não está válido</span>
 					</div>
